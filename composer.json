@@ -2,14 +2,18 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.2",
         "laravel/sanctum": "^2.14.1",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "laravel/nova": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -18,6 +22,12 @@
         "nunomaduro/collision": "^6.1",
         "phpunit/phpunit": "^9.5.10",
         "spatie/laravel-ignition": "^1.0"
+    },
+    "repositories": {
+        "nova": {
+            "type": "path",
+            "url": "./nova"
+        }
     },
     "autoload": {
         "psr-4": {
