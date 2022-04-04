@@ -1,34 +1,40 @@
 <?php
 namespace App\Nova;
 
-use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Password;
+use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Text;
 
-class User extends Resource
+class Slider extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\User::class;
+    public static $model = \App\Models\Slider::class;
 
     /**
-    * The logical group associated with the resource.
-    *
-    * @var string
-    */
-    public static $group = 'Base';
+     * The logical group associated with the resource.
+     *
+     * @var string
+     */
+    public static $group = 'Content';
+
+    /**
+     * The pagination per-page options configured for this resource.
+     *
+     * @return array
+     */
+    public static $perPageOptions = [10, 50, 100, 150];
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -36,7 +42,7 @@ class User extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name', 'email',
+        'id',
     ];
 
     /**
@@ -48,24 +54,29 @@ class User extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make(__('ID'), 'id')
+                ->sortable(),
 
-            Gravatar::make()->maxWidth(50),
-
-            Text::make('Name')
+            Text::make(__('English title'), 'title_en')
                 ->sortable()
-                ->rules('required', 'max:255'),
+                ->rules('required', 'string', 'min:3', 'max:100'),
 
-            Text::make('Email')
+            Text::make(__('Arabic title'), 'title_ar')
                 ->sortable()
-                ->rules('required', 'email', 'max:254')
-                ->creationRules('unique:users,email')
-                ->updateRules('unique:users,email,{{resourceId}}'),
+                ->hideFromIndex()
+                ->rules('required', 'string', 'min:3', 'max:100'),
 
-            Password::make('Password')
-                ->onlyOnForms()
-                ->creationRules('required', 'string', 'min:8')
-                ->updateRules('nullable', 'string', 'min:8'),
+            Text::make(__('English subtitle'), 'subtitle_en')
+                ->sortable()
+                ->rules('nullable', 'string', 'min:3', 'max:100'),
+
+            Text::make(__('Arabic subtitle'), 'subtitle_ar')
+                ->sortable()
+                ->hideFromIndex()
+                ->rules('nullable', 'string', 'min:3', 'max:100'),
+
+            Image::make(__('Slider Image'), 'image')
+                ->rules('required', 'image', 'max:5120')
         ];
     }
 

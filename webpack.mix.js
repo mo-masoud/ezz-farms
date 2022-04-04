@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
 /*
  |--------------------------------------------------------------------------
@@ -11,7 +11,23 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix.js("resources/js/app.js", "public/js")
+    .vue()
+    .postCss("resources/css/app.css", "public/css", [
+        require("postcss-import"),
+        require("tailwindcss"),
+    ])
+    .alias({
+        "@": "resources/js",
+    })
+    .browserSync({
+        proxy: "ezz-farms.test",
+        notify: false,
+        host: "ezz-farms.test",
+        open: false,
+    })
+    .disableNotifications();
+
+if (mix.inProduction()) {
+    mix.version();
+}

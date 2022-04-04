@@ -1,0 +1,11 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.cart-icon::before {
+	content: '\e8f6';
+}
+
+.about-tab {
+	color: black !important;
+}
