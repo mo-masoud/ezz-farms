@@ -10,7 +10,7 @@ const years = [
 		year: 1970,
 		title: 'Our Story',
 		brief:
-			'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes.',
+			'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes.',
 	},
 	{
 		id: 1,
@@ -48,16 +48,18 @@ const current = ref(0)
 <template>
 	<div
 		id="about-us"
-		class="container flex flex-col items-center pt-32 mb-20 mx-auto px-40"
+		class="container pt:24 md:pt-32 mb-20 mx-auto px-8 md:px-12 xl:px-40"
 	>
-		<h1 class="text-6xl font-bold">About us</h1>
-		<div class="flex items-center space-x-5">
-			<span class="border-b h-1 w-14 border-primary"></span>
-			<CowIcon width="32" height="32" color="#FDC421" />
-			<span class="border-b h-1 w-14 border-primary"></span>
+		<div class="flex flex-col items-center">
+			<h1 class="text-5xl md:text-6xl font-bold">About us</h1>
+			<div class="flex items-center space-x-5">
+				<span class="border-b h-1 w-14 border-primary"></span>
+				<CowIcon width="32" height="32" color="#FDC421" />
+				<span class="border-b h-1 w-14 border-primary"></span>
+			</div>
 		</div>
-		<div class="flex items-center mt-20">
-			<div class="w-1/2 h-about">
+		<div class="flex flex-col lg:flex-row items-center mt-20">
+			<div class="w-full lg:w-1/2 h-96 md:h-about">
 				<img
 					src="http://dairy-farm.ancorathemes.com/wp-content/uploads/2016/09/cow_little.jpg"
 					alt="About us"
@@ -65,12 +67,12 @@ const current = ref(0)
 				/>
 			</div>
 			<div
-				class="flex flex-col items-start justify-center bg-light-primary w-1/2 h-about py-24 px-20"
+				class="flex flex-col items-start justify-center bg-light-primary w-full lg:w-1/2 h-96 md:h-about py-24 px-2 md:px-12 xl:px-20"
 			>
-				<div class="w-full mb-4 px-12">
+				<div class="w-full mb-4 px-4 lg:px-8 mt-8 lg:mt-0">
 					<TabGroup>
 						<TabList
-							class="flex flex-wrap justify-between w-full text-center bg-medium-primary rounded-full"
+							class="grid grid-cols-5 w-full text-center bg-medium-primary rounded-full"
 						>
 							<Tab
 								v-for="(year, i) in years"
@@ -79,7 +81,7 @@ const current = ref(0)
 								v-slot="{ selected }"
 							>
 								<button
-									class="inline-block py-2 px-5 font-bold text-xs rounded-full about-tab"
+									class="py-2 px-3 font-bold text-xs rounded-full about-tab"
 									:class="{ 'bg-primary active': selected }"
 								>
 									{{ year.year }}
@@ -90,12 +92,12 @@ const current = ref(0)
 							<TabPanel
 								v-for="(year, i) in years"
 								:key="i"
-								class="text-center p-4"
+								class="text-center p-4 h-80"
 							>
 								<h2 class="text-3xl font-bold text-gray-900">
 									{{ year.title }}
 								</h2>
-								<p class="text-md text-gray-500 mt-4">
+								<p class="text-md text-gray-500 mt-4 line-clamp-6">
 									{{ year.brief }}
 								</p>
 								<MainLink

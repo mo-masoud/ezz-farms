@@ -4,86 +4,92 @@ import Navbar from '@/Components/Navbar.vue'
 </script>
 
 <template>
-	<Navbar />
+	<div>
+		<Navbar />
 
-	<main>
-		<slot />
-	</main>
+		<main>
+			<slot />
+		</main>
 
-	<div class="flex items-center justify-between bg-light-footer px-96 py-14">
-		<Link :href="route('home')">
-			<img
-				src="http://dairy-farm.ancorathemes.com/wp-content/uploads/2016/09/footer-logo.png"
-				alt="logo"
-			/>
-		</Link>
-		<div class="flex flex-col text-primary">
-			<span>888 Broadway, New York, NY, 18813</span>
-			<span>Phone: <span class="text-gray-400">123-456-7890</span></span>
-			<span>Fax: <span class="text-gray-400">123-456-7890</span></span>
-			<span>Email: <span class="text-gray-400">info@yoursite.com</span></span>
-		</div>
-		<div class="flex items-center space-x-2">
-			<a href="twitter.com" class="p-2 bg-primary rounded-full">
+		<div
+			class="flex flex-col md:flex-row items-start md:items-center space-y-12 md:space-y-0 justify-between bg-light-footer px-12 lg-px-40 xl:px-96 py-14"
+		>
+			<Link :href="route('home')">
 				<img
-					src="../../assets/images/twitter-brands.svg"
-					alt="twitter"
-					class="w-5 h-5"
+					src="http://dairy-farm.ancorathemes.com/wp-content/uploads/2016/09/footer-logo.png"
+					alt="logo"
 				/>
-			</a>
-			<a href="facebook.com" class="p-2 bg-primary rounded-full">
-				<img
-					src="../../assets/images/facebook-f-brands.svg"
-					alt="facebook"
-					class="w-5 h-5"
-				/>
-			</a>
-			<a href="linkedin.com" class="p-2 bg-primary rounded-full">
-				<img
-					src="../../assets/images/linkedin-in-brands.svg"
-					alt="linkedin"
-					class="w-5 h-5"
-				/>
-			</a>
-		</div>
-	</div>
-	<footer>
-		<div class="flex items-center justify-between bg-dark-footer px-96 py-6">
-			<ul class="flex items-center space-x-3">
-				<li>
-					<Link
-						href="#"
-						class="text-gray-400 hover:text-primary transition duration-150 ease-in-out"
-					>
-						FAQ
-					</Link>
-				</li>
-				<li>
-					<Link
-						href="#"
-						class="text-gray-400 hover:text-primary transition duration-150 ease-in-out"
-					>
-						News
-					</Link>
-				</li>
-				<li>
-					<Link
-						href="#"
-						class="text-gray-400 hover:text-primary transition duration-150 ease-in-out"
-					>
-						Contact us
-					</Link>
-				</li>
-			</ul>
-			<h1 class="text-gray-400">
-				<a
-					class="hover:text-primary transition duration-150 ease-in-out"
-					href="https://www.linkedin.com/in/mohamed-masoud-999188165/"
-				>
-					Mohamed Masoud
+			</Link>
+			<div class="flex flex-col text-primary">
+				<span>888 Broadway, New York, NY, 18813</span>
+				<span>Phone: <span class="text-gray-400">123-456-7890</span></span>
+				<span>Fax: <span class="text-gray-400">123-456-7890</span></span>
+				<span>Email: <span class="text-gray-400">info@yoursite.com</span></span>
+			</div>
+			<div class="flex items-center space-x-2">
+				<a href="twitter.com" class="p-2 bg-primary rounded-full">
+					<img
+						src="../../assets/images/twitter-brands.svg"
+						alt="twitter"
+						class="w-5 h-5"
+					/>
 				</a>
-				© {{ new Date().getFullYear() }}. All rights reserved.
-			</h1>
+				<a href="facebook.com" class="p-2 bg-primary rounded-full">
+					<img
+						src="../../assets/images/facebook-f-brands.svg"
+						alt="facebook"
+						class="w-5 h-5"
+					/>
+				</a>
+				<a href="linkedin.com" class="p-2 bg-primary rounded-full">
+					<img
+						src="../../assets/images/linkedin-in-brands.svg"
+						alt="linkedin"
+						class="w-5 h-5"
+					/>
+				</a>
+			</div>
 		</div>
-	</footer>
+		<footer>
+			<div
+				class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 bg-dark-footer px-12 lg-px-40 xl:px-96 py-6"
+			>
+				<ul class="flex items-center space-x-3">
+					<li>
+						<Link
+							href="#"
+							class="text-gray-400 text-xs md:text-sm hover:text-primary transition duration-150 ease-in-out"
+						>
+							FAQ
+						</Link>
+					</li>
+					<li>
+						<Link
+							href="#"
+							class="text-gray-400 text-xs md:text-sm hover:text-primary transition duration-150 ease-in-out"
+						>
+							News
+						</Link>
+					</li>
+					<li>
+						<Link
+							href="#"
+							class="text-gray-400 text-xs md:text-sm hover:text-primary transition duration-150 ease-in-out"
+						>
+							Contact us
+						</Link>
+					</li>
+				</ul>
+				<h1 class="text-xs md:text-sm text-gray-400">
+					<a
+						class="hover:text-primary transition duration-150 ease-in-out"
+						href="https://www.linkedin.com/in/mohamed-masoud-999188165/"
+					>
+						Mohamed Masoud
+					</a>
+					© {{ new Date().getFullYear() }}. All rights reserved.
+				</h1>
+			</div>
+		</footer>
+	</div>
 </template>

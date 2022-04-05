@@ -1,51 +1,26 @@
 <script setup>
+import { ref } from 'vue'
 import { Link } from '@inertiajs/inertia-vue3'
 import Logo from '@/Components/Logo.vue'
+
+const showMenu = ref(false)
 </script>
 
 <template>
 	<header>
 		<nav
-			class="fixed shadow-lg top-0 left-0 right-0 bg-white border-gray-200 px-2 sm:px-4 py-2.5 z-50"
+			class="relative lg:fixed top-0 left-0 right-0 shadow-sm lg:shadow-lg bg-white border-gray-200 px-2 py-6 lg:py-2.5 z-50"
 		>
 			<div class="flex flex-wrap justify-between items-center px-6">
 				<Logo />
-				<div class="flex md:order-2">
-					<Link href="#" class="flex items-center space-x-2 group">
-						<span class="rounded-full bg-primary p-1">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="h-7 w-7 text-gray-800 group-hover:text-gray-100 transition-all duration-150 ease-in-out"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="1"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-								/>
-							</svg>
-						</span>
-						<div class="flex flex-col">
-							<span
-								class="uppercase text-xs tracking-tighter text-gray-600 font-semibold"
-								>Cart: 0 Items</span
-							>
-							<span class="text-sm text-gray-800 font-bold">$0.00</span>
-						</div>
-					</Link>
+				<div class="flex space-x-3 lg:order-2">
 					<button
-						data-collapse-toggle="mobile-menu-4"
-						type="button"
-						class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-						aria-controls="mobile-menu-4"
-						aria-expanded="false"
+						@click="showMenu = !showMenu"
+						class="inline-flex items-center text-sm text-gray-900 rounded-lg lg:hidden focus:outline-none"
 					>
 						<span class="sr-only">Open main menu</span>
 						<svg
-							class="w-6 h-6"
+							class="w-8 h-8"
 							fill="currentColor"
 							viewBox="0 0 20 20"
 							xmlns="http://www.w3.org/2000/svg"
@@ -69,13 +44,41 @@ import Logo from '@/Components/Logo.vue'
 							></path>
 						</svg>
 					</button>
+
+					<Link href="#" class="flex items-center space-x-2 group">
+						<span class="rounded-full bg-white md:bg-primary p-1">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-8 w-8 text-gray-800 group-hover:text-gray-100 transition-all duration-150 ease-in-out"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="1"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+								/>
+							</svg>
+						</span>
+						<div class="hidden md:flex flex-col">
+							<span
+								class="uppercase text-xs tracking-tighter text-gray-600 font-semibold"
+							>
+								Cart: 0 Items
+							</span>
+							<span class="text-sm text-gray-800 font-bold">$0.00</span>
+						</div>
+					</Link>
 				</div>
+
 				<div
-					class="hidden justify-between items-cente w-full md:flex md:w-auto md:order-1"
-					id="mobile-menu-4"
+					class="justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+					:class="{ hidden: !showMenu }"
 				>
 					<ul
-						class="flex flex-col mt-4 md:flex-row md:space-x-12 md:mt-0 md:text-sm md:font-bold"
+						class="flex flex-col space-y-6 mt-8 ml-8 lg:flex-row lg:space-x-12 lg:space-y-0 lg:mt-0 lg:ml-0 lg:text-sm lg:font-bold"
 					>
 						<li>
 							<Link
