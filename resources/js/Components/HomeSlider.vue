@@ -30,7 +30,7 @@ const slides = [
 
 <template>
 	<Carousel
-		class="mt-0 lg:mt-20 h-72 md:h-slider"
+		class="h-72 md:h-slider"
 		v-slot="{ currentSlide }"
 		:navigation="false"
 		:timeout="8000"

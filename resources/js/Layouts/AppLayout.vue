@@ -7,7 +7,7 @@ import Navbar from '@/Components/Navbar.vue'
 	<div>
 		<Navbar />
 
-		<main>
+		<main class="mt-0 lg:mt-20">
 			<slot />
 		</main>
 

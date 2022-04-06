@@ -9,3 +9,13 @@
 .about-tab {
 	color: black !important;
 }
+:root {
+	--slider-connect-bg: theme('colors.primary');
+	--slider-tooltip-bg: theme('colors.primary');
+	--slider-handle-ring-color: theme('colors.primary');
+	--slider-bg: theme('colors.gray.300');
+	--slider-height: 0.25rem;
+	--slider-handle-bg: theme('colors.primary');
+	--slider-handle-width: 0.6rem;
+	--slider-handle-height: 0.6rem;
+}

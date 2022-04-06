@@ -1,9 +1,22 @@
-<script setup>
-import { ref } from 'vue'
+<script>
 import { Link } from '@inertiajs/inertia-vue3'
 import Logo from '@/Components/Logo.vue'
 
-const showMenu = ref(false)
+export default {
+	components: {
+		Link,
+		Logo,
+	},
+	data() {
+		return { showMenu: false, url: this.$page.url }
+	},
+	watch: {
+		'$page.url'(url) {
+			url = url.replace(window.location.origin, '')
+			this.url = url
+		},
+	},
+}
 </script>
 
 <template>
@@ -72,7 +85,6 @@ const showMenu = ref(false)
 						</div>
 					</Link>
 				</div>
-
 				<div
 					class="justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
 					:class="{ hidden: !showMenu }"
@@ -84,7 +96,7 @@ const showMenu = ref(false)
 							<Link
 								:href="route('home')"
 								class="uppercase hover:text-primary"
-								:class="{ 'text-primary': $page.url === '/' }"
+								:class="{ 'text-primary': url === '/' }"
 								aria-current="page"
 							>
 								Home
@@ -94,7 +106,7 @@ const showMenu = ref(false)
 							<Link
 								:href="route('home') + '#about-us'"
 								class="uppercase hover:text-primary"
-								:class="{ 'text-primary': $page.url === '/#about-us' }"
+								:class="{ 'text-primary': url === '/#about-us' }"
 								aria-current="page"
 							>
 								About Us
@@ -104,7 +116,7 @@ const showMenu = ref(false)
 							<Link
 								:href="route('home') + '#why-choose-us'"
 								class="uppercase hover:text-primary"
-								:class="{ 'text-primary': $page.url === '/#why-choose-us' }"
+								:class="{ 'text-primary': url === '/#why-choose-us' }"
 								aria-current="page"
 							>
 								Why Choose Us
@@ -112,9 +124,9 @@ const showMenu = ref(false)
 						</li>
 						<li>
 							<Link
-								:href="'#'"
+								:href="route('products')"
 								class="uppercase hover:text-primary"
-								:class="{ 'text-primary': $page.url === '/products' }"
+								:class="{ 'text-primary': url === '/products' }"
 								aria-current="page"
 							>
 								Products
@@ -124,7 +136,7 @@ const showMenu = ref(false)
 							<Link
 								:href="'#'"
 								class="uppercase hover:text-primary"
-								:class="{ 'text-primary': $page.url === '/galleries' }"
+								:class="{ 'text-primary': url === '/galleries' }"
 								aria-current="page"
 							>
 								Galleries
@@ -134,7 +146,7 @@ const showMenu = ref(false)
 							<Link
 								:href="'#'"
 								class="uppercase hover:text-primary"
-								:class="{ 'text-primary': $page.url === '/contact-us' }"
+								:class="{ 'text-primary': url === '/contact-us' }"
 								aria-current="page"
 							>
 								Contact Us
