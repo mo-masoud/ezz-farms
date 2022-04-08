@@ -1,14 +1,35 @@
 <script setup>
 import { Link } from '@inertiajs/inertia-vue3'
 import Navbar from '@/Components/Navbar.vue'
+
+const goToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 </script>
 
 <template>
 	<div>
 		<Navbar />
 
-		<main class="mt-0 lg:mt-20">
+		<main class="relative mt-0 lg:mt-20">
 			<slot />
+			<button
+				@click="goToTop"
+				class="fixed bottom-3 right-3 z-50 bg-primary p-3"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-4 w-4 text-white"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					stroke-width="2"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M5 15l7-7 7 7"
+					/>
+				</svg>
+			</button>
 		</main>
 
 		<div

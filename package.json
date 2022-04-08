@@ -31,6 +31,7 @@
     },
     "dependencies": {
         "@headlessui/vue": "^1.5.0",
-        "@vueform/slider": "^2.0.9"
+        "@vueform/slider": "^2.0.9",
+        "vue-slider-component": "^4.0.0-beta.4"
     }
 }
