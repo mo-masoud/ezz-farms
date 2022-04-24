@@ -18,7 +18,10 @@ export default {
 			<div
 				class="hidden absolute inset-0 z-10 group-hover:flex items-center justify-center transition-all duration-150 ease-in-out"
 			>
-				<Link href="#" class="rounded-full p-4 bg-white shadow-2xl">
+				<Link
+					:href="route('products.show')"
+					class="rounded-full p-4 bg-white shadow-2xl"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-8 w-8 text-primary"
@@ -44,6 +47,10 @@ export default {
 
 		<h1 class="mt-4">{{ item.title }}</h1>
 		<span class="font-bold text-2xl">{{ item.price }} EG</span>
-		<MainLink href="#" text="select option" class="mt-6" />
+		<MainLink
+			:href="route('products.show')"
+			text="select option"
+			class="mt-6"
+		/>
 	</div>
 </template>

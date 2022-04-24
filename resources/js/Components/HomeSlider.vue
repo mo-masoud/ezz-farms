@@ -54,7 +54,7 @@ const slides = [
 						</h3>
 						<Link
 							href="#"
-							class="uppercase text-xxs md:text-sm font-bold tracking-tighter text-gray-900 mt-6 md:mt-20 bg-primary border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition duration-300 ease-in-out py-2 px-4 md:py-3 md:px-7"
+							class="uppercase text-xxs md:text-sm font-bold tracking-tighter text-white mt-6 md:mt-20 bg-primary border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition duration-300 ease-in-out py-2 px-4 md:py-3 md:px-7"
 						>
 							View Our Products
 						</Link>

@@ -58,7 +58,8 @@ export default {
 						</svg>
 					</button>
 
-					<Link href="#" class="flex items-center space-x-2 group">
+					<div></div>
+					<!-- <Link href="#" class="flex items-center space-x-2 group">
 						<span class="rounded-full bg-white md:bg-primary p-1">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +84,7 @@ export default {
 							</span>
 							<span class="text-sm text-gray-800 font-bold">$0.00</span>
 						</div>
-					</Link>
+					</Link> -->
 				</div>
 				<div
 					class="justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
@@ -106,7 +107,7 @@ export default {
 							<Link
 								:href="route('home') + '#about-us'"
 								class="uppercase hover:text-primary"
-								:class="{ 'text-primary': url === '/#about-us' }"
+								:class="{ 'text-primary': url.startsWith('/#about-us') }"
 								aria-current="page"
 							>
 								About Us
@@ -116,7 +117,7 @@ export default {
 							<Link
 								:href="route('home') + '#why-choose-us'"
 								class="uppercase hover:text-primary"
-								:class="{ 'text-primary': url === '/#why-choose-us' }"
+								:class="{ 'text-primary': url.startsWith('/#why-choose-us') }"
 								aria-current="page"
 							>
 								Why Choose Us
@@ -126,7 +127,7 @@ export default {
 							<Link
 								:href="route('products')"
 								class="uppercase hover:text-primary"
-								:class="{ 'text-primary': url === '/products' }"
+								:class="{ 'text-primary': url.startsWith('/products') }"
 								aria-current="page"
 							>
 								Products
@@ -134,9 +135,9 @@ export default {
 						</li>
 						<li>
 							<Link
-								:href="'#'"
+								:href="route('galleries')"
 								class="uppercase hover:text-primary"
-								:class="{ 'text-primary': url === '/galleries' }"
+								:class="{ 'text-primary': url.startsWith('/galleries') }"
 								aria-current="page"
 							>
 								Galleries
@@ -144,9 +145,9 @@ export default {
 						</li>
 						<li>
 							<Link
-								:href="'#'"
+								:href="route('contact-us')"
 								class="uppercase hover:text-primary"
-								:class="{ 'text-primary': url === '/contact-us' }"
+								:class="{ 'text-primary': url.startsWith('/contact-us') }"
 								aria-current="page"
 							>
 								Contact Us

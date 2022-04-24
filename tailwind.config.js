@@ -1,12 +1,12 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+	mode: 'jit',
 	content: [
 		'./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
 		'./storage/framework/views/*.php',
 		'./resources/views/**/*.blade.php',
 		'./resources/js/**/*.vue',
-		'./node_modules/flowbite/**/*.js',
 	],
 	theme: {
 		extend: {
@@ -43,7 +43,10 @@ module.exports = {
 				nav: '5rem',
 				slider: '48rem',
 				about: '35rem',
-				...defaultTheme.height,
+				112: '28rem',
+			},
+			width: {
+				112: '28rem',
 			},
 			fontSize: {
 				xxs: '.65rem',
@@ -65,9 +68,9 @@ module.exports = {
 				'11xl': '9rem',
 			},
 			colors: {
-				primary: '#FDC421',
-				'medium-primary': '#FFE9AC',
-				'light-primary': '#FFF3D3',
+				primary: '#367F7B',
+				'medium-primary': '#629894',
+				'light-primary': '#8DB4B1',
 				'light-footer': '#231F20',
 				'dark-footer': '#181516',
 				...defaultTheme.colors,

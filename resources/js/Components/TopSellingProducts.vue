@@ -11,7 +11,7 @@ import ProductCart from '@/Components/ProductCart.vue'
 			<h1 class="text-5xl lg:text-6xl font-bold">Top selling products</h1>
 			<div class="flex items-center space-x-5">
 				<span class="border-b h-1 w-14 border-primary"></span>
-				<CowIcon width="32" height="32" color="#FDC421" />
+				<CowIcon width="32" height="32" color="#367F7B" />
 				<span class="border-b h-1 w-14 border-primary"></span>
 			</div>
 		</div>

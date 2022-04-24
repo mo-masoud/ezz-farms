@@ -21,3 +21,15 @@ Route::get('/', function () {
 Route::get('/products', function () {
     return Inertia::render('Products');
 })->name('products');
+
+Route::get('/products/show', function () {
+    return Inertia::render('ShowProduct');
+})->name('products.show');
+
+Route::get('/galleries', function () {
+    return Inertia::render('Galleries');
+})->name('galleries');
+
+Route::get('/contact-us', function () {
+    return Inertia::render('ContactUs');
+})->name('contact-us');

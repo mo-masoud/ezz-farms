@@ -98,8 +98,9 @@ export default {
 			<div
 				class="w-full mt-12 md:mt-0 order-2 md:order-1 md:w-1/5 h-full md:min-h-screen bg-light-primary px-8 py-12"
 			>
-				<ProductsCart />
-				<div class="mt-28">
+				<!-- <ProductsCart /> -->
+				<!-- mt-28 here -->
+				<div class="">
 					<h1 class="text-3xl font-bold">Price Filter</h1>
 					<vue-slider
 						ref="slider"
@@ -120,22 +121,22 @@ export default {
 					<h1 class="text-3xl font-bold">Categories</h1>
 					<ul class="space-y-3 mt-4 list-disc pl-5 text-primary text-xl">
 						<li>
-							<Link class="text-gray-600 text-base" :href="route('products')">
+							<Link class="text-gray-700 text-base" :href="route('products')">
 								Butter
 							</Link>
 						</li>
 						<li>
-							<Link class="text-gray-600 text-base" :href="route('products')">
+							<Link class="text-gray-700 text-base" :href="route('products')">
 								Cheese
 							</Link>
 						</li>
 						<li>
-							<Link class="text-gray-600 text-base" :href="route('products')">
+							<Link class="text-gray-700 text-base" :href="route('products')">
 								Ice Cream
 							</Link>
 						</li>
 						<li>
-							<Link class="text-gray-600 text-base" :href="route('products')">
+							<Link class="text-gray-700 text-base" :href="route('products')">
 								Milk
 							</Link>
 						</li>

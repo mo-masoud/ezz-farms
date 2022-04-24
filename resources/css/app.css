@@ -6,10 +6,6 @@
 	content: '\e8f6';
 }
 
-.about-tab {
-	color: black !important;
-}
-
 .vue-slider-process {
 	background-color: theme('colors.primary') !important;
 }

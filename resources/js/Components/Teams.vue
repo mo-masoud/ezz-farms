@@ -15,7 +15,7 @@ import CowIcon from '@/Components/CowIcon.vue'
 		<div
 			class="flex flex-col items-center justify-center h-full py-8 bg-black bg-opacity-40 z-10"
 		>
-			<h1 class="text-6xl font-bold text-primary">Teams</h1>
+			<h1 class="text-6xl font-bold text-white">Teams</h1>
 			<div class="flex items-center space-x-5">
 				<span class="border-b h-1 w-14 border-white"></span>
 				<CowIcon width="32" height="32" color="#FFFFFF" />
@@ -34,8 +34,8 @@ import CowIcon from '@/Components/CowIcon.vue'
 						/>
 					</div>
 
-					<h2 class="text-primary text-2xl mt-8 font-bold">Mohamed Masoud</h2>
-					<h4 class="text-white text-sm">Fullstack Developer</h4>
+					<h2 class="text-white text-2xl mt-8 font-bold">Mohamed Masoud</h2>
+					<h4 class="text-gray-200 text-sm">Fullstack Developer</h4>
 				</div>
 				<div class="flex flex-col items-center justify-center">
 					<div class="border-4 border-white rounded-full w-52 h-52">
@@ -46,8 +46,8 @@ import CowIcon from '@/Components/CowIcon.vue'
 						/>
 					</div>
 
-					<h2 class="text-primary text-2xl mt-8 font-bold">Mohamed Masoud</h2>
-					<h4 class="text-white text-sm">Fullstack Developer</h4>
+					<h2 class="text-white text-2xl mt-8 font-bold">Mohamed Masoud</h2>
+					<h4 class="text-gray-200 text-sm">Fullstack Developer</h4>
 				</div>
 				<div class="flex flex-col items-center justify-center">
 					<div class="border-4 border-white rounded-full w-52 h-52">
@@ -58,8 +58,8 @@ import CowIcon from '@/Components/CowIcon.vue'
 						/>
 					</div>
 
-					<h2 class="text-primary text-2xl mt-8 font-bold">Mohamed Masoud</h2>
-					<h4 class="text-white text-sm">Fullstack Developer</h4>
+					<h2 class="text-white text-2xl mt-8 font-bold">Mohamed Masoud</h2>
+					<h4 class="text-gray-200 text-sm">Fullstack Developer</h4>
 				</div>
 				<div class="flex flex-col items-center justify-center">
 					<div class="border-4 border-white rounded-full w-52 h-52">
@@ -70,8 +70,8 @@ import CowIcon from '@/Components/CowIcon.vue'
 						/>
 					</div>
 
-					<h2 class="text-primary text-2xl mt-8 font-bold">Mohamed Masoud</h2>
-					<h4 class="text-white text-sm">Fullstack Developer</h4>
+					<h2 class="text-white text-2xl mt-8 font-bold">Mohamed Masoud</h2>
+					<h4 class="text-gray-200 text-sm">Fullstack Developer</h4>
 				</div>
 			</div>
 		</div>

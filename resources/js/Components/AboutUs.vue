@@ -54,7 +54,7 @@ const current = ref(0)
 			<h1 class="text-5xl md:text-6xl font-bold">About us</h1>
 			<div class="flex items-center space-x-5">
 				<span class="border-b h-1 w-14 border-primary"></span>
-				<CowIcon width="32" height="32" color="#FDC421" />
+				<CowIcon width="32" height="32" color="#367F7B" />
 				<span class="border-b h-1 w-14 border-primary"></span>
 			</div>
 		</div>
@@ -81,7 +81,7 @@ const current = ref(0)
 								v-slot="{ selected }"
 							>
 								<button
-									class="py-2 px-3 font-bold text-xs rounded-full about-tab"
+									class="text-white py-2 px-3 font-bold text-xs rounded-full about-tab"
 									:class="{ 'bg-primary active': selected }"
 								>
 									{{ year.year }}
@@ -94,10 +94,12 @@ const current = ref(0)
 								:key="i"
 								class="text-center p-4 h-80"
 							>
-								<h2 class="text-3xl font-bold text-gray-900">
+								<h2 class="text-3xl font-bold text-white">
 									{{ year.title }}
 								</h2>
-								<p class="text-md text-gray-500 mt-4 line-clamp-6">
+								<p
+									class="text-md text-gray-100 font-semibold mt-4 line-clamp-6"
+								>
 									{{ year.brief }}
 								</p>
 								<MainLink
