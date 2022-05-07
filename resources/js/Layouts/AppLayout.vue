@@ -33,36 +33,41 @@ const goToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 		</main>
 
 		<div
-			class="flex flex-col md:flex-row items-start md:items-center space-y-12 md:space-y-0 justify-between bg-light-footer px-12 lg-px-40 xl:px-96 py-14"
+			class="flex flex-col md:flex-row items-start md:items-center space-y-12 md:space-y-0 justify-between bg-primary px-12 lg-px-40 xl:px-96 py-14"
 		>
 			<Link :href="route('home')">
-				<img
-					src="http://dairy-farm.ancorathemes.com/wp-content/uploads/2016/09/footer-logo.png"
-					alt="logo"
-				/>
+				<img src="/images/LogoEng.png" class="w-52" alt="logo" />
 			</Link>
-			<div class="flex flex-col text-primary">
+			<div class="flex flex-col text-xl text-black">
 				<span>888 Broadway, New York, NY, 18813</span>
-				<span>Phone: <span class="text-gray-400">123-456-7890</span></span>
-				<span>Fax: <span class="text-gray-400">123-456-7890</span></span>
-				<span>Email: <span class="text-gray-400">info@yoursite.com</span></span>
+				<span
+					>Phone:
+					<span class="text-gray-800 font-bold">123-456-7890</span></span
+				>
+				<span
+					>Fax: <span class="text-gray-800 font-bold">123-456-7890</span></span
+				>
+				<span
+					>Email:
+					<span class="text-gray-800 font-bold">info@yoursite.com</span></span
+				>
 			</div>
 			<div class="flex items-center space-x-2">
-				<a href="twitter.com" class="p-2 bg-primary rounded-full">
+				<a href="twitter.com" class="p-2 bg-light-primary rounded-full">
 					<img
 						src="../../assets/images/twitter-brands.svg"
 						alt="twitter"
 						class="w-5 h-5"
 					/>
 				</a>
-				<a href="facebook.com" class="p-2 bg-primary rounded-full">
+				<a href="facebook.com" class="p-2 bg-light-primary rounded-full">
 					<img
 						src="../../assets/images/facebook-f-brands.svg"
 						alt="facebook"
 						class="w-5 h-5"
 					/>
 				</a>
-				<a href="linkedin.com" class="p-2 bg-primary rounded-full">
+				<a href="linkedin.com" class="p-2 bg-light-primary rounded-full">
 					<img
 						src="../../assets/images/linkedin-in-brands.svg"
 						alt="linkedin"
@@ -76,22 +81,22 @@ const goToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 				class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 bg-dark-footer px-12 lg-px-40 xl:px-96 py-6"
 			>
 				<ul class="flex items-center space-x-3">
-					<li>
+					<!-- <li>
 						<Link
 							href="#"
 							class="text-gray-400 text-xs md:text-sm hover:text-primary transition duration-150 ease-in-out"
 						>
 							FAQ
 						</Link>
-					</li>
-					<li>
+					</li> -->
+					<!-- <li>
 						<Link
 							href="#"
 							class="text-gray-400 text-xs md:text-sm hover:text-primary transition duration-150 ease-in-out"
 						>
 							News
 						</Link>
-					</li>
+					</li> -->
 					<li>
 						<Link
 							href="#"
@@ -106,7 +111,7 @@ const goToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 						class="hover:text-primary transition duration-150 ease-in-out"
 						href="https://www.linkedin.com/in/mohamed-masoud-999188165/"
 					>
-						Mohamed Masoud
+						Ezz Farms
 					</a>
 					© {{ new Date().getFullYear() }}. All rights reserved.
 				</h1>

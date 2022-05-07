@@ -41,30 +41,31 @@ export default {
 				<span class="border-b h-1 w-14 border-white"></span>
 			</div>
 			<p
-				class="text-sm text-gray-200 lg:text-base xl:text-xl mx-auto w-3/5 text-center mt-2"
+				class="text-sm text-gray-200 lg:text-base xl:text-xl mx-auto w-3/5 text-center mt-2 overflow-y-auto"
 			>
 				Here you will find a wide range of healthy and fresh dairy products that
 				were proudly produced at our farm by our farmers and cows. Welcome to
-				Jacksons!
+				Jacksons! Here you will find a wide range of healthy and fresh dairy
+				products that were proudly produced at our farm by our farmers and cows.
 			</p>
 			<img
 				alt="Logo"
-				class="absolute -bottom-40"
-				src="http://dairy-farm.ancorathemes.com/wp-content/uploads/2016/09/big-cow.png"
+				class="absolute -bottom-52 w-60"
+				src="/images/LogoEng.png"
 			/>
 		</div>
 		<!-- end welcome message -->
 
 		<Services />
 
-		<AboutUs />
-
 		<WhyChooseUs />
+
+		<AboutUs />
 
 		<HomeCategories />
 
 		<TopSellingProducts />
 
-		<Teams />
+		<!-- <Teams /> -->
 	</AppLayout>
 </template>

@@ -27,8 +27,8 @@ export default {
 			>
 				<img
 					alt="Logo"
-					class="w-full md:w-40 xl:w-full h-full md:h-40 xl:h-full"
-					src="http://dairy-farm.ancorathemes.com/wp-content/uploads/2016/09/big-cow.png"
+					class="w-72 md:w-40 xl:w-72"
+					src="/images/LogoEng.png"
 				/>
 			</div>
 			<div

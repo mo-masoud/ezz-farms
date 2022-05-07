@@ -1,9 +1,9 @@
 <template>
 	<a href="/" class="flex items-center">
 		<img
-			src="http://dairy-farm.ancorathemes.com/wp-content/uploads/2016/09/logo.png"
+			src="/images/LogoEng.png"
 			alt="Ezz Farms"
-			class="w-40 md:w-full object-contain"
+			class="w-28 h-24 object-contain"
 		/>
 	</a>
 </template>

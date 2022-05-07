@@ -3,24 +3,27 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Textarea;
 
-class Slider extends Resource
+class Product extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\Slider::class;
+    public static $model = \App\Models\Product::class;
 
     /**
-     * The logical group associated with the resource.
-     *
-     * @var string
-     */
-    public static $group = 'Content';
+    * The logical group associated with the resource.
+    *
+    * @var string
+    */
+    public static $group = 'Products';
 
     /**
      * The pagination per-page options configured for this resource.
@@ -43,10 +46,6 @@ class Slider extends Resource
      */
     public static $search = [
         'id',
-        'title_en',
-        'title_ar',
-        'subtitle_en',
-        'subtitle_ar',
     ];
 
     /**
@@ -58,28 +57,51 @@ class Slider extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make(__('ID'), 'id')
-                ->sortable(),
+            ID::make(__('ID'), 'id')->sortable(),
 
-            Text::make(__('English title'), 'title_en')
-                ->sortable()
-                ->rules('required', 'string', 'min:3', 'max:100'),
+            Text::make(__('English name'), 'name_en')
+            ->sortable()
+            ->rules('required', 'string', 'min:3', 'max:100'),
 
-            Text::make(__('Arabic title'), 'title_ar')
-                ->sortable()
+            Text::make(__('Arabic name'), 'name_ar')
                 ->hideFromIndex()
                 ->rules('required', 'string', 'min:3', 'max:100'),
 
-            Text::make(__('English subtitle'), 'subtitle_en')
+            BelongsTo::make(__('Category'), 'category', Category::class)
                 ->sortable()
-                ->rules('nullable', 'string', 'min:3', 'max:100'),
+                ->rules('required', 'numeric', 'exists:categories,id'),
 
-            Text::make(__('Arabic subtitle'), 'subtitle_ar')
+            BelongsTo::make(__('Animal Kind'), 'animalKind', AnimalKind::class)
                 ->sortable()
+                ->rules('required', 'numeric', 'exists:animal_kinds,id'),
+
+            Number::make(__('Starting Price'), 'starting_price')
+                ->sortable()
+                ->min(0)
+                ->rules('required', 'numeric', 'min:0'),
+
+            Number::make(__('Maximum Price'), 'maximum_price')
+                ->sortable()
+                ->min(0)
+                ->rules('required', 'numeric', 'min:0'),
+
+            Textarea::make(__('English brief'), 'brief_en')
                 ->hideFromIndex()
-                ->rules('nullable', 'string', 'min:3', 'max:100'),
+                ->rules('nullable', 'string', 'min:3', 'max:200'),
 
-            Image::make(__('Slider Image'), 'image')
+            Textarea::make(__('Arabic brief'), 'brief_ar')
+                ->hideFromIndex()
+                ->rules('nullable', 'string', 'min:3', 'max:200'),
+
+            Textarea::make(__('English description'), 'description_en')
+            ->hideFromIndex()
+            ->rules('nullable', 'string', 'min:3', 'max:200'),
+
+            Textarea::make(__('Arabic description'), 'description_ar')
+                ->hideFromIndex()
+                ->rules('nullable', 'string', 'min:3', 'max:200'),
+
+            Image::make(__('Image'), 'image')
                 ->rules('required', 'image', 'max:5120')
         ];
     }

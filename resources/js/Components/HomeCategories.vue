@@ -6,7 +6,7 @@ import CowIcon from '@/Components/CowIcon.vue'
 </script>
 
 <template>
-	<div class="container mx-auto px-8 md:px-20 lg:px-40 my-28">
+	<div id="categories" class="container mx-auto px-8 md:px-20 lg:px-40 my-28">
 		<div class="flex flex-col items-center">
 			<h1 class="text-6xl font-bold">Categories</h1>
 			<div class="flex items-center space-x-5">

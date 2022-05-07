@@ -3,24 +3,24 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Image;
 
-class Slider extends Resource
+class Category extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\Slider::class;
+    public static $model = \App\Models\Category::class;
 
     /**
-     * The logical group associated with the resource.
-     *
-     * @var string
-     */
-    public static $group = 'Content';
+    * The logical group associated with the resource.
+    *
+    * @var string
+    */
+    public static $group = 'Products';
 
     /**
      * The pagination per-page options configured for this resource.
@@ -79,7 +79,7 @@ class Slider extends Resource
                 ->hideFromIndex()
                 ->rules('nullable', 'string', 'min:3', 'max:100'),
 
-            Image::make(__('Slider Image'), 'image')
+            Image::make(__('Image'), 'image')
                 ->rules('required', 'image', 'max:5120')
         ];
     }

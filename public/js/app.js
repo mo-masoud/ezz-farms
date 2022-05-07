@@ -22589,6 +22589,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
+  id: "categories",
   "class": "container mx-auto px-8 md:px-20 lg:px-40 my-28"
 };
 var _hoisted_2 = {
@@ -22807,7 +22808,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
             ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(slide.subtitle), 1
             /* TEXT */
             ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
-              href: "#",
+              href: "#categories",
               "class": "uppercase text-xxs md:text-sm font-bold tracking-tighter text-white mt-6 md:mt-20 bg-primary border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition duration-300 ease-in-out py-2 px-4 md:py-3 md:px-7"
             }, {
               "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -22863,9 +22864,9 @@ var _hoisted_1 = {
 };
 
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "http://dairy-farm.ancorathemes.com/wp-content/uploads/2016/09/logo.png",
+  src: "/images/LogoEng.png",
   alt: "Ezz Farms",
-  "class": "w-40 md:w-full object-contain"
+  "class": "w-28 h-24 object-contain"
 }, null, -1
 /* HOISTED */
 );
@@ -23545,8 +23546,8 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 mb-12"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
   alt: "Logo",
-  "class": "w-full md:w-40 xl:w-full h-full md:h-40 xl:h-full",
-  src: "http://dairy-farm.ancorathemes.com/wp-content/uploads/2016/09/big-cow.png"
+  "class": "w-72 md:w-40 xl:w-72",
+  src: "/images/LogoEng.png"
 })], -1
 /* HOISTED */
 );
@@ -23640,17 +23641,18 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 
 var _hoisted_3 = [_hoisted_2];
 var _hoisted_4 = {
-  "class": "flex flex-col md:flex-row items-start md:items-center space-y-12 md:space-y-0 justify-between bg-light-footer px-12 lg-px-40 xl:px-96 py-14"
+  "class": "flex flex-col md:flex-row items-start md:items-center space-y-12 md:space-y-0 justify-between bg-primary px-12 lg-px-40 xl:px-96 py-14"
 };
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "http://dairy-farm.ancorathemes.com/wp-content/uploads/2016/09/footer-logo.png",
+  src: "/images/LogoEng.png",
+  "class": "w-52",
   alt: "logo"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex flex-col text-primary\"><span>888 Broadway, New York, NY, 18813</span><span>Phone: <span class=\"text-gray-400\">123-456-7890</span></span><span>Fax: <span class=\"text-gray-400\">123-456-7890</span></span><span>Email: <span class=\"text-gray-400\">info@yoursite.com</span></span></div><div class=\"flex items-center space-x-2\"><a href=\"twitter.com\" class=\"p-2 bg-primary rounded-full\"><img src=\"" + _assets_images_twitter_brands_svg__WEBPACK_IMPORTED_MODULE_1__["default"] + "\" alt=\"twitter\" class=\"w-5 h-5\"></a><a href=\"facebook.com\" class=\"p-2 bg-primary rounded-full\"><img src=\"" + _assets_images_facebook_f_brands_svg__WEBPACK_IMPORTED_MODULE_2__["default"] + "\" alt=\"facebook\" class=\"w-5 h-5\"></a><a href=\"linkedin.com\" class=\"p-2 bg-primary rounded-full\"><img src=\"" + _assets_images_linkedin_in_brands_svg__WEBPACK_IMPORTED_MODULE_3__["default"] + "\" alt=\"linkedin\" class=\"w-5 h-5\"></a></div>", 2);
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex flex-col text-xl text-black\"><span>888 Broadway, New York, NY, 18813</span><span>Phone: <span class=\"text-gray-800 font-bold\">123-456-7890</span></span><span>Fax: <span class=\"text-gray-800 font-bold\">123-456-7890</span></span><span>Email: <span class=\"text-gray-800 font-bold\">info@yoursite.com</span></span></div><div class=\"flex items-center space-x-2\"><a href=\"twitter.com\" class=\"p-2 bg-light-primary rounded-full\"><img src=\"" + _assets_images_twitter_brands_svg__WEBPACK_IMPORTED_MODULE_1__["default"] + "\" alt=\"twitter\" class=\"w-5 h-5\"></a><a href=\"facebook.com\" class=\"p-2 bg-light-primary rounded-full\"><img src=\"" + _assets_images_facebook_f_brands_svg__WEBPACK_IMPORTED_MODULE_2__["default"] + "\" alt=\"facebook\" class=\"w-5 h-5\"></a><a href=\"linkedin.com\" class=\"p-2 bg-light-primary rounded-full\"><img src=\"" + _assets_images_linkedin_in_brands_svg__WEBPACK_IMPORTED_MODULE_3__["default"] + "\" alt=\"linkedin\" class=\"w-5 h-5\"></a></div>", 2);
 
 var _hoisted_8 = {
   "class": "flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 bg-dark-footer px-12 lg-px-40 xl:px-96 py-6"
@@ -23659,20 +23661,16 @@ var _hoisted_9 = {
   "class": "flex items-center space-x-3"
 };
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" FAQ ");
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Contact us ");
 
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" News ");
-
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Contact us ");
-
-var _hoisted_13 = {
+var _hoisted_11 = {
   "class": "text-xs md:text-sm text-gray-400"
 };
 
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   "class": "hover:text-primary transition duration-150 ease-in-out",
   href: "https://www.linkedin.com/in/mohamed-masoud-999188165/"
-}, " Mohamed Masoud ", -1
+}, " Ezz Farms ", -1
 /* HOISTED */
 );
 
@@ -23691,7 +23689,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["href"]), _hoisted_6]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("footer", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
+  , ["href"]), _hoisted_6]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("footer", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li>\n\t\t\t\t\t\t<Link\n\t\t\t\t\t\t\thref=\"#\"\n\t\t\t\t\t\t\tclass=\"text-gray-400 text-xs md:text-sm hover:text-primary transition duration-150 ease-in-out\"\n\t\t\t\t\t\t>\n\t\t\t\t\t\t\tFAQ\n\t\t\t\t\t\t</Link>\n\t\t\t\t\t</li> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li>\n\t\t\t\t\t\t<Link\n\t\t\t\t\t\t\thref=\"#\"\n\t\t\t\t\t\t\tclass=\"text-gray-400 text-xs md:text-sm hover:text-primary transition duration-150 ease-in-out\"\n\t\t\t\t\t\t>\n\t\t\t\t\t\t\tNews\n\t\t\t\t\t\t</Link>\n\t\t\t\t\t</li> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
     href: "#",
     "class": "text-gray-400 text-xs md:text-sm hover:text-primary transition duration-150 ease-in-out"
   }, {
@@ -23701,27 +23699,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
-    href: "#",
-    "class": "text-gray-400 text-xs md:text-sm hover:text-primary transition duration-150 ease-in-out"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_11];
-    }),
-    _: 1
-    /* STABLE */
-
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
-    href: "#",
-    "class": "text-gray-400 text-xs md:text-sm hover:text-primary transition duration-150 ease-in-out"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_12];
-    }),
-    _: 1
-    /* STABLE */
-
-  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" © " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(new Date().getFullYear()) + ". All rights reserved. ", 1
+  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" © " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(new Date().getFullYear()) + ". All rights reserved. ", 1
   /* TEXT */
   )])])])]);
 }
@@ -24012,15 +23990,15 @@ var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "text-sm text-gray-200 lg:text-base xl:text-xl mx-auto w-3/5 text-center mt-2"
-}, " Here you will find a wide range of healthy and fresh dairy products that were proudly produced at our farm by our farmers and cows. Welcome to Jacksons! ", -1
+  "class": "text-sm text-gray-200 lg:text-base xl:text-xl mx-auto w-3/5 text-center mt-2 overflow-y-auto"
+}, " Here you will find a wide range of healthy and fresh dairy products that were proudly produced at our farm by our farmers and cows. Welcome to Jacksons! Here you will find a wide range of healthy and fresh dairy products that were proudly produced at our farm by our farmers and cows. ", -1
 /* HOISTED */
 );
 
 var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
   alt: "Logo",
-  "class": "absolute -bottom-40",
-  src: "http://dairy-farm.ancorathemes.com/wp-content/uploads/2016/09/big-cow.png"
+  "class": "absolute -bottom-52 w-60",
+  src: "/images/LogoEng.png"
 }, null, -1
 /* HOISTED */
 );
@@ -24032,15 +24010,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   var _component_Services = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Services");
 
-  var _component_AboutUs = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("AboutUs");
-
   var _component_WhyChooseUs = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("WhyChooseUs");
+
+  var _component_AboutUs = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("AboutUs");
 
   var _component_HomeCategories = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("HomeCategories");
 
   var _component_TopSellingProducts = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("TopSellingProducts");
-
-  var _component_Teams = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Teams");
 
   var _component_AppLayout = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("AppLayout");
 
@@ -24050,7 +24026,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         color: "#ffffff",
         height: "32",
         width: "32"
-      }), _hoisted_5]), _hoisted_6, _hoisted_7]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" end welcome message "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Services), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_AboutUs), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_WhyChooseUs), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_HomeCategories), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TopSellingProducts), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Teams)];
+      }), _hoisted_5]), _hoisted_6, _hoisted_7]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" end welcome message "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Services), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_WhyChooseUs), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_AboutUs), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_HomeCategories), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TopSellingProducts), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <Teams /> ")];
     }),
     _: 1
     /* STABLE */

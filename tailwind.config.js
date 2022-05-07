@@ -71,7 +71,7 @@ module.exports = {
 				primary: '#367F7B',
 				'medium-primary': '#629894',
 				'light-primary': '#8DB4B1',
-				'light-footer': '#231F20',
+				'light-footer': '#619895',
 				'dark-footer': '#181516',
 				...defaultTheme.colors,
 			},

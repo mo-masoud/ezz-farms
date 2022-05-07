@@ -3,24 +3,23 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Text;
 
-class Slider extends Resource
+class AnimalKind extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\Slider::class;
+    public static $model = \App\Models\AnimalKind::class;
 
     /**
-     * The logical group associated with the resource.
-     *
-     * @var string
-     */
-    public static $group = 'Content';
+    * The logical group associated with the resource.
+    *
+    * @var string
+    */
+    public static $group = 'Products';
 
     /**
      * The pagination per-page options configured for this resource.
@@ -44,9 +43,7 @@ class Slider extends Resource
     public static $search = [
         'id',
         'title_en',
-        'title_ar',
-        'subtitle_en',
-        'subtitle_ar',
+        'title_ar'
     ];
 
     /**
@@ -58,29 +55,16 @@ class Slider extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make(__('ID'), 'id')
-                ->sortable(),
+            ID::make(__('ID'), 'id')->sortable(),
 
             Text::make(__('English title'), 'title_en')
-                ->sortable()
-                ->rules('required', 'string', 'min:3', 'max:100'),
+            ->sortable()
+            ->rules('required', 'string', 'min:3', 'max:100'),
 
             Text::make(__('Arabic title'), 'title_ar')
                 ->sortable()
                 ->hideFromIndex()
                 ->rules('required', 'string', 'min:3', 'max:100'),
-
-            Text::make(__('English subtitle'), 'subtitle_en')
-                ->sortable()
-                ->rules('nullable', 'string', 'min:3', 'max:100'),
-
-            Text::make(__('Arabic subtitle'), 'subtitle_ar')
-                ->sortable()
-                ->hideFromIndex()
-                ->rules('nullable', 'string', 'min:3', 'max:100'),
-
-            Image::make(__('Slider Image'), 'image')
-                ->rules('required', 'image', 'max:5120')
         ];
     }
 
