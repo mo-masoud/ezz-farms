@@ -29,4 +29,19 @@ class Product extends Model
     {
         return $this->belongsTo(AnimalKind::class);
     }
+
+    public function weights()
+    {
+        return $this->belongsToMany(Weight::class, 'products_weights');
+    }
+
+    public function cuts()
+    {
+        return $this->belongsToMany(Cut::class, 'cuts_products');
+    }
+
+    public function packagings()
+    {
+        return $this->belongsToMany(Packaging::class, 'packagings_products');
+    }
 }

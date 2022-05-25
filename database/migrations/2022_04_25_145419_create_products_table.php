@@ -22,8 +22,8 @@ return new class extends Migration {
             $table->string('brief_ar', 200)->nullable();
             $table->string('description_en', 200);
             $table->string('description_ar', 200);
-            $table->decimal('starting_price');
-            $table->decimal('maximum_price');
+            $table->decimal('starting_price')->nullable();
+            $table->decimal('maximum_price')->nullable();
             $table->string('image');
             $table->timestamps();
         });

@@ -1,6 +1,7 @@
 <?php
 namespace App\Nova;
 
+use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
@@ -37,7 +38,7 @@ class Product extends Resource
      *
      * @var string
      */
-    public static $title = 'title_en';
+    public static $title = 'name_en';
 
     /**
      * The columns that should be searched.
@@ -46,6 +47,8 @@ class Product extends Resource
      */
     public static $search = [
         'id',
+        'name_en',
+        'name_ar'
     ];
 
     /**
@@ -102,7 +105,13 @@ class Product extends Resource
                 ->rules('nullable', 'string', 'min:3', 'max:200'),
 
             Image::make(__('Image'), 'image')
-                ->rules('required', 'image', 'max:5120')
+                ->rules('required', 'image', 'max:5120'),
+
+            BelongsToMany::make(__('Weights'), 'weights', Weight::class),
+
+            BelongsToMany::make(__('Cuts'), 'cuts', Cut::class),
+
+            BelongsToMany::make(__('Packaging'), 'packagings', Packaging::class),
         ];
     }
 
