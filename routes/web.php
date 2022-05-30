@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,22 +17,14 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Home');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about-us/{about}', [HomeController::class, 'about'])->name('about');
 
-Route::get('/products', function () {
-    return Inertia::render('Products');
-})->name('products');
+Route::get('/products', [ProductController::class, 'index'])->name('products');
 
-Route::get('/products/show', function () {
-    return Inertia::render('ShowProduct');
-})->name('products.show');
+Route::get('/products/{id?}', [ProductController::class, 'show'])->name('products.show');
 
-Route::get('/galleries', function () {
-    return Inertia::render('Galleries');
-})->name('galleries');
+Route::get('/galleries', [GalleryController::class, 'index'])->name('galleries');
 
-Route::get('/contact-us', function () {
-    return Inertia::render('ContactUs');
-})->name('contact-us');
+Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact-us');
+Route::post('/contact-us', [ContactUsController::class, 'store'])->name('contact-us.store');
